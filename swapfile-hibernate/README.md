@@ -5,7 +5,7 @@
 
 ### Crie e monte o swapfile. Create and mount swapfile
 ```
-sudo fallocate -l 3G /swapfile
+sudo dd if=/dev/zero of=/swapfile bs=1M count=4100 status=progress
 sudo chmod 0600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
